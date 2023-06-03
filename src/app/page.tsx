@@ -8,6 +8,8 @@ import { UploadButton } from "@uploadthing/react";
 import { OurFileRouter } from "./api/uploadthing/core";
 import { useState } from "react";
 
+import { Analytics } from "@vercel/analytics/react";
+
 export default function Home() {
   const [link, setLink] = useState<string>("");
   const [error, setError] = useState<string>("");
@@ -15,6 +17,8 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-24">
+      <Analytics />
+
       <p className="text-xl p-4">Wil&apos;s Upload Thing</p>
       <span className="text-md p-4">
         Using the free tier of&nbsp;
